@@ -1,0 +1,60 @@
+{% extends 'admins/adminbase.html' %}
+
+{% block content %}
+    <style>
+
+        .jumbotron {
+            height: 450px;
+            background: #e9e8e6;
+        }
+    </style>
+    <div class="jumbotron">
+        <h1 class="text-center">Accuracy Score of Algorithms.</h1>
+         <center>
+          <table class="table">
+            <tr>
+                <th>S.NO</th>
+                <th>Algorithm</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 score</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Logistic Regression</td>
+                <td>{{lg.lg_accuracy}}</td>
+                <td>{{lg.lg_precision}}</td>
+                <td>{{lg.lg_recall}}</td>
+                <td>{{lg.lg_f1_score}}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Multinomial Naive Bayes</td>
+                <td>{{nb.nb_accuracy}}</td>
+                <td>{{nb.nb_precision}}</td>
+                <td>{{nb.nb_recall}}</td>
+                <td>{{nb.nb_f1_score}}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bernoulli Naive Bayes</td>
+                <td>{{bnb.bnb_accuracy}}</td>
+                <td>{{bnb.bnb_precision}}</td>
+                <td>{{bnb.bnb_recall}}</td>
+                <td>{{bnb.bnb_f1_score}}</td>
+            </tr>
+          <tr>
+            <td>4</td>
+            <td>Random Forest</td>
+            <td>{{rf.rf_accuracy}}</td>
+            <td>{{rf.rf_precision}}</td>
+            <td>{{rf.rf_recall}}</td>
+            <td>{{rf.rf_f1_score}}</td>
+        </tr>
+
+        </table>
+
+</center>
+    </div>
+{% endblock %}

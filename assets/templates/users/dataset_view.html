@@ -1,0 +1,35 @@
+{% extends 'users/userbase.html' %}
+
+{% block content %}
+
+    <style>
+        .jumbotron {
+            height: 450px;
+        }
+    </style>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+    <div class="jumbotron">
+        <h1 class="text-center">View Dataset</h1>
+        <pre>
+          {{data|safe}}
+      </pre>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'users/userbase.html' %}
+
+
+{% block content %}
+
+    <style>
+        .jumbotron {
+            height: 450px;
+        }
+        .jumbotron textarea{
+            background-color: whitesmoke;
+        }
+        
+        .jumbotron input{
+            border-style: none;
+            width: 120px;
+            height: 35px;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 6px;
+        }
+        .jumbotron input:hover{
+            background-color: darkblue;
+        }
+        
+    </style>
+
+    <div class="jumbotron">
+        <h1 class="text-center">Prediction form </h1>
+        <center>
+        <p>
+            <h4>The Review {{tweet}} is <font style="color: RED"><b>{{msg}}</b></font></h4>
+        </p>
+        <form action="{%url 'user_predictions'%}" method="post">
+            {%csrf_token%}
+            
+            <label>
+                Enter Your Text
+            </label>
+            <textarea  name="tweet" required rows="4" cols="25"></textarea>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </div>
+</center>
+{% endblock %}

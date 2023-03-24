@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+     .sub{
+           text-align: center;
+           line-height: 30px;
+           color: darkblue;
+           font-size: 16px;
+       }
+
+    #sub1{
+        color: rgb(18, 156, 18);
+            
+    }
+    #sub2{
+        color: rgb(209, 195, 0);
+    }
+    #sub3{
+        color: red;
+    }
+</style>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+        
+        <h2><b>Sentiment Detection For Amazon Product Reviews</b></h2>
+        <div class="sub">
+            <p>
+                Our Website analyzes the reviews of products and segregrate them into<br>
+                <div id="sub1"> 😄Positive Reviews<br>
+                </div>
+                <div id="sub2"> 😐Neutral Reviews<br>
+                </div>
+                <div id="sub3"> 😠Negative Reviews<br>
+                </div>
+            </p>
+        </div>
+        <a href="https://ieeexplore.ieee.org/document/9402414/" class="btn-about">About Us</a>
+    </div>
+</section><!-- End Hero -->
+
+{% endblock %}
